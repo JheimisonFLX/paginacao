@@ -18,8 +18,6 @@ $total_registros = mysqli_fetch_array($registros)["count"];
 
 $paginas = ceil($total_registros / $limite);
 
-var_dump($paginas);
-
 $sql = "select user_login, user_email from wp__users order by user_login LIMIT $inicio, $limite";
 $result = $conn->query($sql);
   
